@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--text-color);
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar a {
+    font-size: 2rem;
+    color: white;
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.home {
+    background-image: url(../assets/img/deposito.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.home-img img {
+    width: 25vw;
+    margin-left: 18%;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+
+
+.home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+}
+
+.home-content p {
+    font-size: 2rem;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+    display: inline-flex;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-image: url(../assets/img/zara.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.sobre-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.sobre-content h2,
+.sobre-content p {
+    color: white;
+
+}
+
+.sobre-content h2 {
+    font-size: 10rem;
+    text-align: left; 
+    margin-right: 7rem; 
+}
+
+.sobre-content p {
+    font-size: 3.5rem;
+    margin: 0; 
+}
+
+
+.about {
+    background-image: url(../assets/img/compra.JPG);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title-about {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.fila {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.pasos {
+    flex-basis: calc(50% - 10px);
+    /* 10px de espacio entre los elementos */
+    margin: 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.pasos:not(:nth-child(2n)) {
+    border-right: 2px solid #ccc;
+}
+
+.pasos img {
+    max-width: 22%;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.pasos p {
+    font-size: 22px;
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #25d366;
+    /* Color de WhatsApp */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-btn::before {
+    content: "\f232";
+    font-family: "Font Awesome 5 Brands";
+    font-size: 24px;
+    color: #fff;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-text p a {
+    color: white;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 60%;
+        padding: 1rem 3%;
+        background-color: black;
+        border-top: .1rem solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 60vw;
+        margin-top: 3rem;
+    }
+
+    .sobre-content {
+        flex-direction: column; 
+    }
+
+    .sobre-content h2 {
+        font-size: 6rem;
+        margin-right: 0; 
+    }
+
+    .sobre-content p {
+        font-size: 2.5rem; 
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .pasos {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .logo {
+        display: none;
+    }
+    
+    .home-content h1 span {
+        font-size: 4rem;
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .title-about {
+        font-size: 30px;
+    }
+
+    .pasos {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .pasos p {
+        font-size: 16px;
+    }
+
+    .footer-iconTop{
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .home-content h1{
+        font-size: 4rem;
+    }
+
+    .home-content h1 span {
+        font-size: 2.5rem;
+    }
+
+    .sobre h2{
+        font-size: 5rem;
+    }
+
+    .sobre p{
+        font-size: 2.3rem;
+    }
+}
